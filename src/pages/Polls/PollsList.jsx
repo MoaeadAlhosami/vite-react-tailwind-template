@@ -1,4 +1,3 @@
-// src/pages/PollsList.jsx
 import { useEffect, useState } from "react";
 import { getAllPolls, deletePoll } from "../../services/pollService";
 import { Link } from "react-router-dom";

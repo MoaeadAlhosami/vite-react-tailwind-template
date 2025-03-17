@@ -1,4 +1,3 @@
-// src/pages/PollCreateEdit.jsx
 import { useEffect, useState } from "react";
 import {
   createPoll,

@@ -1,4 +1,3 @@
-// src/services/solveService.js
 import axiosInstance from "./axiosConfig";
 import { endPoints } from "./endPoints";
 

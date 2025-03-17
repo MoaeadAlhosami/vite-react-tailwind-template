@@ -42,7 +42,6 @@ export default function AdminDashboard() {
 
   return (
     <div className="flex min-h-screen bg-gray-50">
-      {/* الشريط الجانبي */}
       <div className="hidden md:block w-1/4 bg-gray-800 relative">
         <img
           src="/images/Rectangle 1 copy.png"
@@ -51,9 +50,7 @@ export default function AdminDashboard() {
         />
       </div>
 
-      {/* المحتوى الرئيسي */}
       <div className="flex-1 flex flex-col px-4 py-6 md:px-8 md:py-6">
-        {/* شريط البحث والتنبيهات */}
         <div className="flex items-center justify-between p-4 shadow-sm">
           <div
             style={{ direction: "rtl" }}
@@ -93,27 +90,22 @@ export default function AdminDashboard() {
           </div>
         </div>
 
-        {/* البطاقات الثلاث */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
-          {/* البطاقة الأولى: خلفية تيل مع نص أبيض */}
           <div
             style={{ direction: "rtl" }}
             className="bg-teal-600 text-white rounded-xl shadow-lg p-4"
           >
             <div className="flex items-center justify-between">
               <div className="text-sm flex items-center">
-                {/* أيقونة التاريخ مع Margin */}
                 <MdAccessTimeFilled className="w-4 h-4 m-2 text-white" />
                 <span>التاريخ</span>
               </div>
-              {/* أيقونة إضافية (رسم بياني) مع Margin */}
               <FaChartLine className="w-6 h-6 m-2 text-white" />
             </div>
 
             <div className="mt-2 text-lg font-semibold">نسبة النتائج</div>
             <div className="mt-1 text-sm">10% زيادة أسبوعية</div>
             <div className="mt-2">
-              {/* الأيقونة الموجودة مسبقًا - لا نقترب منها */}
               <img
                 src="/icons/ic-trending-up-24px.svg"
                 alt="arrow-icon"
@@ -122,20 +114,17 @@ export default function AdminDashboard() {
             </div>
           </div>
 
-          {/* البطاقة الثانية: خلفية سوداء مع نص أبيض */}
           <div
             style={{ direction: "rtl" }}
             className="bg-black text-white rounded-xl shadow-lg p-4"
           >
             <div className="flex items-center justify-between">
               <div className="text-sm flex items-center">
-                {/* أيقونة الاستطلاع مع Margin */}
                 <FaPollH className="w-4 h-4 m-2 text-white" />
                 <span>عدد الاستطلاعات المنتهية</span>
               </div>
             </div>
             <div className="mt-2 text-xs flex items-center">
-              {/* أيقونة التاريخ مع Margin */}
               <MdAccessTimeFilled className="w-4 h-4 m-2 text-white" />
               <span>التاريخ</span>
             </div>
@@ -145,24 +134,20 @@ export default function AdminDashboard() {
             </div>
           </div>
 
-          {/* البطاقة الثالثة: خلفية بيضاء مع نص تيل */}
           <div
             style={{ direction: "rtl" }}
             className="bg-white text-teal-600 rounded-xl shadow-lg p-4"
           >
             <div className="flex items-center justify-between">
               <div className="text-sm flex items-center">
-                {/* أيقونة المستخدمين مع Margin */}
                 <FaUsers className="w-4 h-4 m-2 text-teal-600" />
                 <span>عدد المشاركين</span>
               </div>
             </div>
             <div className="mt-2 text-xs flex items-center">
-              {/* أيقونة التاريخ مع Margin */}
               <MdAccessTimeFilled className="w-4 h-4 m-2 text-teal-600" />
               <span>التاريخ</span>
             </div>
-            {/* إضافة أيقونة شخص بجانب الرقم */}
             <div className="mt-2 text-lg font-semibold flex items-center">
               <FaUserAlt className="w-4 h-4 m-2" />
               <span>23344</span>
@@ -170,7 +155,6 @@ export default function AdminDashboard() {
           </div>
         </div>
 
-        {/* جدول الاستطلاعات */}
         <div
           style={{ direction: "rtl" }}
           className="bg-white rounded-md shadow-sm m-4 p-4"

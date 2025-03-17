@@ -1,18 +1,16 @@
 import React, { useState } from "react";
-// import { solve } from "../services/solveService";
-
 function MultiStepSurvey() {
   const [currentStep, setCurrentStep] = useState(1);
 
   const [userInfo, setUserInfo] = useState({
     name: "",
     email: "",
-    employment_status: "", // طالب - موظف - صاحب عمل
+    employment_status: "",
     teaching: "",
     date_of_birth: "",
     age: "",
     address: "",
-    gender: "", // ذكر - أنثى
+    gender: "",
   });
 
   const [answers, setAnswers] = useState([
@@ -66,22 +64,12 @@ function MultiStepSurvey() {
         answerId: a.answerId,
       })),
     };
-
-    // try {
-    //   const response = await solve(payload);
-    //   console.log("Solve response:", response);
-    // } catch (error) {
-    //   console.error("Solve error:", error);
-    // }
-
     alert("تم إرسال الاستطلاع بنجاح!");
   };
 
-  // شريط الخطوات مع تطبيق فلتر على الصور في الدوائر المفعلة
   const StepHeader = () => {
     return (
       <div className="flex items-center justify-center gap-6 mb-8">
-        {/* الخطوة 1 */}
         <div className="flex flex-col items-center">
           <div
             className={`w-10 h-10 rounded-full flex items-center justify-center ${
@@ -111,10 +99,8 @@ function MultiStepSurvey() {
           </span>
         </div>
 
-        {/* الخط الفاصل */}
         <div className="w-12 h-[1px] bg-gray-300" />
 
-        {/* الخطوة 2 */}
         <div className="flex flex-col items-center">
           <div
             className={`w-10 h-10 rounded-full flex items-center justify-center ${
@@ -144,10 +130,8 @@ function MultiStepSurvey() {
           </span>
         </div>
 
-        {/* الخط الفاصل */}
         <div className="w-12 h-[1px] bg-gray-300" />
 
-        {/* الخطوة 3 */}
         <div className="flex flex-col items-center">
           <div
             className={`w-10 h-10 rounded-full flex items-center justify-center ${
@@ -174,10 +158,8 @@ function MultiStepSurvey() {
     );
   };
 
-  // الخطوة 1: المعلومات
   const StepOne = () => (
     <div style={{ direction: "rtl" }} className="space-y-4">
-      {/* الاسم */}
       <div className="flex flex-col md:flex-row items-center">
         <label className="md:w-40 text-gray-700 mb-2 md:mb-0 md:mr-2">
           الاسم
@@ -190,7 +172,6 @@ function MultiStepSurvey() {
         />
       </div>
 
-      {/* البريد الإلكتروني */}
       <div className="flex flex-col md:flex-row items-center">
         <label className="md:w-40 text-gray-700 mb-2 md:mb-0 md:mr-2">
           البريد الإلكتروني
@@ -203,7 +184,6 @@ function MultiStepSurvey() {
         />
       </div>
 
-      {/* الحالة الوظيفية (راديو) */}
       <div className="flex flex-col md:flex-row items-center">
         <label className="md:w-40 text-gray-700 mb-2 md:mb-0 md:mr-2">
           الحالة الوظيفية
@@ -229,7 +209,6 @@ function MultiStepSurvey() {
         </div>
       </div>
 
-      {/* التعليم */}
       <div className="flex flex-col md:flex-row items-center">
         <label className="md:w-40 text-gray-700 mb-2 md:mb-0 md:mr-2">
           التعليم
@@ -244,9 +223,7 @@ function MultiStepSurvey() {
         />
       </div>
 
-      {/* تاريخ الولادة + العمر */}
       <div className="flex flex-col md:flex-row md:items-center md:space-x-4 rtl:space-x-reverse space-y-4 md:space-y-0">
-        {/* تاريخ الولادة */}
         <div className="flex flex-col md:flex-row items-center w-full md:w-1/2">
           <label className="md:w-32 text-gray-700 mb-2 md:mb-0 md:mr-2">
             تاريخ الولادة
@@ -261,7 +238,6 @@ function MultiStepSurvey() {
           />
         </div>
 
-        {/* العمر */}
         <div className="flex flex-col md:flex-row items-center w-full md:w-1/2">
           <label className="md:w-24 text-gray-700 mb-2 md:mb-0 md:mr-2">
             العمر
@@ -275,7 +251,6 @@ function MultiStepSurvey() {
         </div>
       </div>
 
-      {/* عنوان السكن */}
       <div className="flex flex-col md:flex-row items-center">
         <label className="md:w-40 text-gray-700 mb-2 md:mb-0 md:mr-2">
           عنوان السكن
@@ -290,7 +265,6 @@ function MultiStepSurvey() {
         />
       </div>
 
-      {/* الجنس */}
       <div className="flex flex-col md:flex-row items-center">
         <label className="md:w-40 text-gray-700 mb-2 md:mb-0 md:mr-2">
           الجنس
@@ -315,7 +289,6 @@ function MultiStepSurvey() {
     </div>
   );
 
-  // الخطوة 2: الأسئلة
   const StepTwo = () => (
     <div style={{ direction: "rtl" }} className="space-y-8">
       {answers.map((ans) => (
@@ -347,7 +320,6 @@ function MultiStepSurvey() {
     </div>
   );
 
-  // الخطوة 3: الموافقة/الانتهاء مع تحديث صورة النهاية لتكون أكبر
   const StepThree = () => (
     <div className="flex flex-col items-center justify-center text-center space-y-4">
       <img
@@ -362,7 +334,6 @@ function MultiStepSurvey() {
 
   return (
     <div className="flex min-h-screen">
-      {/* القسم الأيسر (1/3) مع خلفية الصورة */}
       <div
         className="w-1/3 p-8 text-white flex flex-col relative overflow-hidden"
         style={{ backgroundColor: "#001b42" }}
@@ -394,21 +365,17 @@ function MultiStepSurvey() {
         </div>
       </div>
 
-      {/* القسم الأيمن (2/3) */}
       <div className="w-2/3 bg-white flex flex-col">
-        {/* شريط الخطوات */}
         <div className="p-4 border-b border-gray-200">
           <StepHeader />
         </div>
 
-        {/* المحتوى */}
         <div className="flex-1 p-6 md:p-10">
           {currentStep === 1 && <StepOne />}
           {currentStep === 2 && <StepTwo />}
           {currentStep === 3 && <StepThree />}
         </div>
 
-        {/* الأزرار السفلية */}
         <div className="p-4 border-t border-gray-200 flex justify-between items-center">
           {currentStep > 1 ? (
             <button
